@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lz.dao.StudentDao">
+	<select id="selectAll" resultType="Student">
+		select * from t_student
+	</select>
+
+	<select id="findByTeam" resultType="Student" parameterType="String">
+		select * from t_student where steam=#{steam}
+	</select>
+
+	<select id="findGetTname" resultType="Student" parameterType="String">
+		select distinct steam from t_student
+	</select>
+
+	<select id="search" resultType="Student" parameterType="String">
+		select * from t_student where sname like concat('%',#{sname},'%')
+	</select>
+
+	<insert id="addInfo" parameterType="Student">
+		insert into t_student (sname,scode,spassword,sphone,sgender,steam)
+		values(#{sname},#{scode},#{spassword},#{sphone},#{sgender},#{steam})
+	</insert>
+
+	<update id="updateInfo" parameterType="Student">
+		update t_student
+		<set>
+			<if test="sname != null and sname != ''">sname=#{sname},</if>
+			<if test="scode != null and scode != ''">scode=#{scode},</if>
+			<if test="spassword != null and spassword != ''">spassword=#{spassword},</if>
+			<if test="sphone != null and sphone != ''">sphone=#{sphone},</if>
+			<if test="sgender != null and sgender != ''">sgender=#{sgender},</if>
+			<if test="steam != null and steam != ''">steam=#{steam}</if>
+		</set>
+		where sid=#{sid}
+	</update>
+
+	<delete id="deleteInfo" parameterType="Integer">
+		delete from t_student where sid=#{sid}
+	</delete>
+</mapper>

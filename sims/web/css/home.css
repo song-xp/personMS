@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: userDefined;
+    src: url("../fonts/ZhuShiTi-Regular.ttf");
+}
+nav{
+    width: 15%;
+    height: 100%;
+    background-color: #b6ffec;
+    position: fixed;
+    left: 0;
+    top: 0;
+    font-family: userDefined;
+}
+nav > li{
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 1.5em;
+    border-bottom: 2px solid green;
+    list-style: none;
+    cursor: pointer;
+}
+nav > li > form{
+    width: 100%;
+    height: 100%;
+}
+nav > li > form > input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: #b6ffec;
+    display: block;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: userDefined;
+}
+nav > li:hover{
+    background-color: #fffcc4;
+}
+nav > li > form > input:hover{
+    background-color: #fffcc4;
+}
+nav > a{
+    width: 70%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    display: block;
+    background-color: #9efff8;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    color: #000;
+    border: 1px solid #000;
+    position: absolute;
+    left: 15%;
+    bottom: 5%;
+}
+nav > a:hover{
+    background-color: #fffcc4;
+}
+.content{
+    width: 83%;
+    background-color: #f9ffdf;
+    position: absolute;
+    right: 1%;
+    top: 0;
+    font-family: userDefined;
+}
+.content > ul{
+    width: 100%;
+    height: 50px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2em;
+}
+.content > ul > li:nth-child(1){
+    width: 70%;
+    height: 50px;
+    line-height: 50px;
+}
+.content > ul > li:nth-child(2){
+    width: 30%;
+    height: 50px;
+    line-height: 50px;
+    text-align: right;
+}
+.content > ul > li > a{
+    text-decoration: none;
+    color: #5063ff;
+    margin-right: 13px;
+}
+.content > ol{
+    list-style: none;
+    position: relative;
+}
+.content > ol > .select{
+    margin-bottom: 15px;
+}
+.content > ol > .select .form-group{
+    display: inline-block;
+    font-size: 1.2em;
+}
+.content > ol > .select .form-group > .form-control{
+    width: 180px;
+    height: 25px;
+}
+.content > ol > .select > form > .class_select{
+    width: 75px;
+    height: 25px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+.content > ol > .ConditionQuery{
+    position: absolute;
+    right: 1%;
+    top: 0;
+}
+.content > ol > .ConditionQuery input:nth-of-type(1){
+    width: 180px;
+    height: 25px;
+}
+.content > ol > .ConditionQuery input:nth-of-type(2){
+    width: 75px;
+    height: 25px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+.content > table{
+    border-collapse: collapse;
+}
+.content > table th,.content > table td{
+    width: 178px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+/*添加/修改学生信息表单样式*/
+#addSdudent{
+    width: 390px;
+    height: 430px;
+    font-family: userDefined;
+    font-size: 1.2em;
+    position: absolute;
+    left: 40%;
+    top: 15%;
+    display: none;
+}
+#updateInfo{
+    width: 390px;
+    height: 430px;
+    font-family: userDefined;
+    font-size: 1.2em;
+    position: absolute;
+    left: 40%;
+    top: 15%;
+    display: none;
+}
+form > fieldset{
+    width: 100%;
+    height: 100%;
+    background-color: #f9ffdf;
+    border: 5px solid deepskyblue;
+    box-shadow: 0 0 20px #1affee;
+    border-radius: 20px;
+}
+form > fieldset > legend{
+    margin-left: 30px;
+    font-size: 1.2em;
+    font-family: userDefined;
+}
+form .drag{
+    width: 100%;
+    height: 20px;
+    cursor: move;
+}
+form table{
+    width: 90%;
+    height: 300px;
+    margin: 20px auto;
+}
+form table input{
+    width: 220px;
+    height: 30px;
+}
+form table input::-webkit-input-placeholder{
+    color: red;
+    font-family: userDefined;
+    font-size: 1.2em;
+}
+form table .common::-webkit-input-placeholder{
+    color: gray;
+}
+form table input::-moz-placeholder{
+    color: red;
+    font-family: userDefined;
+    font-size: 1.2em;
+}
+form table .common::-moz-placeholder{
+    color: gray;
+}
+form table input::-ms-input-placeholder{
+    color: red;
+    font-family: userDefined;
+    font-size: 1.2em;
+}
+form table .common::-ms-input-placeholder{
+    color: gray;
+}
+form > fieldset > input{
+    width: 100px;
+    height: 30px;
+    margin-left: 58px;
+    border-radius: 20px;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+    background-color: #11ffbb;
+    font-family: userDefined;
+    cursor: pointer;
+}
+form > span{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    position: absolute;
+    right: 2%;
+    top: 4%;
+    cursor: pointer;
+}
+
+/*删除学生信息表单样式*/
+#deleteInfo{
+    width: 280px;
+    height: 185px;
+    font-family: userDefined;
+    font-size: 1.2em;
+    position: absolute;
+    left: 40%;
+    top: 15%;
+    display: none;
+}
+#deleteInfo > fieldset{
+    width: 100%;
+    height: 100%;
+    border: 5px solid deepskyblue;
+    background-color: #f9ffdf;
+    box-shadow: 0 0 20px #1affee;
+    border-radius: 20px;
+}
+#deleteInfo > fieldset > legend{
+    margin-left: 30px;
+    font-size: 1.2em;
+    font-family: userDefined;
+}
+#deleteInfo .drag{
+    width: 100%;
+    height: 20px;
+    cursor: move;
+}
+#deleteInfo table{
+    width: 90%;
+    height: 60px;
+    margin: 15px auto;
+}
+#deleteInfo table input{
+    width: 175px;
+    height: 30px;
+}
+#deleteInfo > fieldset > input{
+    width: 80px;
+    height: 30px;
+    margin-left: 39px;
+    border-radius: 20px;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+    background-color: #11ffbb;
+    font-family: userDefined;
+    cursor: pointer;
+}
+#deleteInfo table input::-webkit-input-placeholder{
+    color: red;
+    font-family: userDefined;
+    font-size: 1.2em;
+}
+#deleteInfo table input::-moz-placeholder{
+    color: red;
+    font-family: userDefined;
+    font-size: 1.2em;
+}
+#deleteInfo table input::-ms-input-placeholder{
+    color: red;
+    font-family: userDefined;
+    font-size: 1.2em;
+}
+#deleteInfo > span {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    position: absolute;
+    right: 2%;
+    top: 10%;
+    cursor: pointer;
+}
+#msg{
+    display: none;
+}
